@@ -1,0 +1,49 @@
+<html>
+
+<form action="http://localhost:5000/saveEditedRecord" method="post">
+    <input type="hidden" name="empno" value="{{record[0]}}">
+<table>
+    <tr>
+        <td> Name:                          </td>
+        <td> <input type="Text" name="na" value="{{ record[1] }}"> </td>
+    </tr>
+    <tr>
+        <td> Department: </td>
+        <td>
+            <select name="dept" value="IT">
+            <option selected hidden> {{record[2]}} </option>
+            <option value="HR"> Human Resource </option>
+            <option value="IT"> Information Technology </option>
+            <option value="Sales"> Sales </option>
+            <option value="Training"> Training and Development </option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td> Salary: </td>
+        <td> <input type="text" name="sal" value="{{ record[3] }}"></td>"
+        <tr>
+    <tr>
+        <td> Subject: </td>
+        <td>
+            <select name="subject">
+                <option value="java"> Java Programming </option>
+                <option value="sql"> SQL Development </option>
+                <option value="php"> PHP Programming </option>
+                <option value="python"> Python Programming </option>
+                <option value="C"> C Programming </option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Marks: </td>
+        <td><input type="text" name ="marks" value="{{ record[5] }}"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="submit"></td>
+        <td></td>
+    </tr>
+</table>
+
+</form>
